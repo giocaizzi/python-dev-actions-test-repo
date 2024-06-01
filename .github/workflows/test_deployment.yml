@@ -6,6 +6,7 @@ name: Test deployment workflow
 on:
   repository_dispatch:
     types: [pull_request_activity]
+  workflow_dispatch:
 
 
 jobs:
