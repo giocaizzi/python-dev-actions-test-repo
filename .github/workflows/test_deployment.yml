@@ -1,0 +1,18 @@
+
+name: Test deployment workflow
+
+# This actions is called when a PR is opened on the main repository
+# https://github.com/giocaizzi/python-dev-actions
+on:
+  repository_dispatch:
+    types: [opened_pull_request]
+
+
+jobs:
+  deploy:
+    uses: giocaizzi/python-dev-actions/.github/workflows/deployment.yml@toml
+    secrets: inherit
+    with:
+      python-version: "3.10"
+      python-tested-versions: "['3.10','3.11','3.12']"
+      python-package-type: "pyproject.toml"
