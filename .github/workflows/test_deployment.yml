@@ -5,7 +5,7 @@ name: Test deployment workflow
 # https://github.com/giocaizzi/python-dev-actions
 on:
   repository_dispatch:
-    types: [opened_pull_request]
+    types: [pull_request_activity]
 
 
 jobs:
